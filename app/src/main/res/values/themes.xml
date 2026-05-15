@@ -1,0 +1,19 @@
+<resources>
+    <style name="Base.Theme.APPNueva" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul_principal</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/verde_apoyo</item>
+        <item name="colorOnSecondary">@color/texto_principal</item>
+        <item name="android:statusBarColor">@color/azul_oscuro</item>
+        <item name="android:navigationBarColor">@color/fondo_pantalla</item>
+        <item name="android:windowBackground">@color/fondo_pantalla</item>
+        <item name="colorSurface">@color/fondo_tarjeta</item>
+        <item name="colorOnSurface">@color/texto_principal</item>
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+        <item name="android:textColorSecondary">@color/texto_secundario</item>
+        <item name="android:editTextColor">@color/texto_principal</item>
+        <item name="android:textColorHint">@color/texto_pista</item>
+    </style>
+
+    <style name="Theme.APPNueva" parent="Base.Theme.APPNueva" />
+</resources>

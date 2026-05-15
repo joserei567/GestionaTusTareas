@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1032441920757",
+    "firebase_url": "https://myapp-4c771-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "myapp-4c771",
+    "storage_bucket": "myapp-4c771.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032441920757:android:24aaed97666408cf3759bc",
+        "android_client_info": {
+          "package_name": "com.example.appnueva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032441920757-hsc5juvunsbi12012bubo5vnf3g34ulc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTc_W_Tz9P8dYyB7-lcQiqcFu_QY322O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032441920757-hsc5juvunsbi12012bubo5vnf3g34ulc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

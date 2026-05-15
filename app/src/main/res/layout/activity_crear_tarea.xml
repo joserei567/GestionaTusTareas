@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pantalla_degradado">
+
+    <LinearLayout
+        android:id="@+id/raizCrearTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fondo_tarjeta_formulario"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_crear_tarea"
+                android:textColor="@color/texto_principal"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/campoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/fondo_campo"
+                android:hint="@string/pista_titulo_tarea"
+                android:inputType="textCapSentences"
+                android:importantForAutofill="no"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/texto_pista" />
+
+            <EditText
+                android:id="@+id/campoDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fondo_campo"
+                android:hint="@string/pista_descripcion_tarea"
+                android:inputType="textCapSentences|textMultiLine"
+                android:importantForAutofill="no"
+                android:minLines="3"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/texto_pista" />
+
+            <EditText
+                android:id="@+id/campoFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fondo_campo"
+                android:hint="@string/pista_fecha_tarea"
+                android:focusable="true"
+                android:clickable="true"
+                android:inputType="none"
+                android:importantForAutofill="no"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/texto_pista" />
+
+            <Spinner
+                android:id="@+id/selectorPrioridad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fondo_campo"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/selectorCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fondo_campo"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/selectorEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fondo_campo"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/interruptorRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/activar_recordatorio"
+                android:textColor="@color/texto_principal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botonGuardarTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/fondo_boton_principal"
+                app:backgroundTint="@null"
+                android:text="@string/guardar_tarea"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

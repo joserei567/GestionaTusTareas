@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azul_principal">#256D85</color>
+    <color name="azul_oscuro">#123A4A</color>
+    <color name="verde_apoyo">#7FC8A9</color>
+    <color name="verde_oscuro">#2F7D68</color>
+    <color name="amarillo_suave">#D99A2B</color>
+    <color name="fondo_resumen">#EAF4F2</color>
+    <color name="fondo_pantalla">#F3F6F6</color>
+    <color name="fondo_tarjeta">#FFFFFFFF</color>
+    <color name="texto_principal">#173042</color>
+    <color name="texto_secundario">#5D7484</color>
+    <color name="texto_pista">#7B8F9A</color>
+    <color name="borde_suave">#D8E4EA</color>
+    <color name="rojo_suave">#B94747</color>
+    <color name="azul_muy_claro">#DDECF0</color>
+    <color name="verde_muy_claro">#E4F3ED</color>
+    <color name="amarillo_muy_claro">#F8E9C9</color>
+    <color name="naranja_apoyo">#C9792D</color>
+    <color name="fondo_tarjeta_suave">#FDFEFE</color>
+    <color name="morado_vivo">#435B73</color>
+    <color name="azul_vivo">#2B7C9B</color>
+</resources>

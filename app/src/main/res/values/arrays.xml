@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias_tarea">
+        <item>@string/categoria_general</item>
+        <item>@string/categoria_estudios</item>
+        <item>@string/categoria_trabajo</item>
+        <item>@string/categoria_personal</item>
+        <item>@string/categoria_compras</item>
+        <item>@string/categoria_salud</item>
+    </string-array>
+
+    <string-array name="orden_tareas">
+        <item>@string/orden_fecha</item>
+        <item>@string/orden_estado</item>
+        <item>@string/orden_categoria</item>
+    </string-array>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raizRegistro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pantalla_degradado"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo_tarjeta_formulario"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_registro"
+            android:textColor="@color/texto_principal"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/subtitulo_registro"
+            android:textColor="@color/texto_secundario"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/ayuda_nombre_registro"
+            android:textColor="@color/texto_secundario"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/campoNombreRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/fondo_campo"
+            android:hint="@string/nombre_usuario"
+            android:inputType="textCapWords"
+            android:autofillHints="name"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_pista" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/ayuda_correo_registro"
+            android:textColor="@color/texto_secundario"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/campoCorreoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/fondo_campo"
+            android:hint="@string/correo_electronico"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_pista" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/ayuda_contrasena_registro"
+            android:textColor="@color/texto_secundario"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/campoContrasenaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/fondo_campo"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:autofillHints="newPassword"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_pista" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonCrearCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_boton_principal"
+            app:backgroundTint="@null"
+            android:text="@string/crear_cuenta"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonVolverInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/fondo_boton_salida"
+            app:backgroundTint="@null"
+            android:text="@string/volver_inicio_sesion"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

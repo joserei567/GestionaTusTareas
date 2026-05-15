@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raizInicioSesion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pantalla_degradado"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo_tarjeta_formulario"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_inicio_sesion"
+            android:textColor="@color/texto_principal"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/subtitulo_login"
+            android:textColor="@color/texto_secundario"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/campoCorreoInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_campo"
+            android:hint="@string/correo_electronico"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_pista" />
+
+        <EditText
+            android:id="@+id/campoContrasenaInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/fondo_campo"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:autofillHints="password"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_pista" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonAcceder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_boton_principal"
+            app:backgroundTint="@null"
+            android:text="@string/iniciar_sesion"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonIrRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/fondo_boton_salida"
+            app:backgroundTint="@null"
+            android:text="@string/crear_cuenta"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

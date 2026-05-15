@@ -1,0 +1,192 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="diagrama-clases-limpio" name="Diagrama de clases">
+    <mxGraphModel dx="1350" dy="707" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="usuario" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="Usuario&#xa;-------------------------&#xa;- id: String&#xa;- nombre: String&#xa;- correo: String" vertex="1">
+          <mxGeometry height="110" width="220" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tarea" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="Tarea&#xa;-------------------------&#xa;- id: String&#xa;- titulo: String&#xa;- descripcion: String&#xa;- prioridad: PrioridadTarea&#xa;- estado: EstadoTarea&#xa;- fechaLimite: String&#xa;- fechaCreacion: String&#xa;- categoriaId: String&#xa;- usuarioId: String&#xa;- recordatorioActivo: boolean&#xa;- fechaRecordatorio: long&#xa;- chatId: String&#xa;- colaboradorCorreo: String&#xa;-------------------------&#xa;+ estaCompartida(): boolean" vertex="1">
+          <mxGeometry height="310" width="300" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="peticion" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="PeticionColaboracion&#xa;-------------------------&#xa;- id: String&#xa;- tareaId: String&#xa;- tituloTarea: String&#xa;- propietarioId: String&#xa;- propietarioCorreo: String&#xa;- colaboradorCorreo: String&#xa;- chatId: String&#xa;- estado: String" vertex="1">
+          <mxGeometry height="210" width="290" x="690" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mensaje" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="MensajeChat&#xa;-------------------------&#xa;- id: String&#xa;- correoAutor: String&#xa;- texto: String&#xa;- fechaEnvio: long" vertex="1">
+          <mxGeometry height="140" width="250" x="1050" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="repoauth" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="RepositorioAutenticacionFirebase&#xa;-------------------------&#xa;+ iniciarSesion()&#xa;+ registrar()&#xa;+ cerrarSesion()&#xa;+ obtenerUsuarioActual()" vertex="1">
+          <mxGeometry height="140" width="290" x="40" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="repotareas" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="RepositorioTareasFirebase&#xa;-------------------------&#xa;+ obtenerTareas()&#xa;+ obtenerTareaPorId()&#xa;+ guardarTarea()&#xa;+ eliminarTarea()" vertex="1">
+          <mxGeometry height="140" width="290" x="390" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="repocolab" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="RepositorioColaboracionFirebase&#xa;-------------------------&#xa;+ enviarPeticion()&#xa;+ obtenerPeticiones()&#xa;+ aceptarPeticion()&#xa;+ denegarPeticion()&#xa;+ enviarMensaje()&#xa;+ escucharMensajes()" vertex="1">
+          <mxGeometry height="180" width="320" x="740" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="gestor" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="GestorRecordatorios&#xa;-------------------------&#xa;+ programarRecordatorio()&#xa;+ cancelarRecordatorio()&#xa;+ crearCanal()" vertex="1">
+          <mxGeometry height="130" width="250" x="1110" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="receptor" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="ReceptorRecordatorio&#xa;-------------------------&#xa;+ onReceive()" vertex="1">
+          <mxGeometry height="90" width="250" x="1110" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="adaptador" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="AdaptadorTareas&#xa;-------------------------&#xa;+ mostrarTareas()&#xa;+ mostrarColorSegunEstado()" vertex="1">
+          <mxGeometry height="110" width="250" x="1110" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="inicio" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="InicioSesionActivity&#xa;-------------------------&#xa;+ iniciarSesion()" vertex="1">
+          <mxGeometry height="90" width="230" x="40" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="registro" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="RegistroActivity&#xa;-------------------------&#xa;+ registrarUsuario()" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="principal" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="PrincipalActivity&#xa;-------------------------&#xa;+ mostrarTareas()&#xa;+ ordenarTareas()" vertex="1">
+          <mxGeometry height="100" width="240" x="600" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="crearact" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="CrearTareaActivity&#xa;-------------------------&#xa;+ crearTarea()" vertex="1">
+          <mxGeometry height="90" width="230" x="880" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="detalleact" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="DetalleTareaActivity&#xa;-------------------------&#xa;+ mostrarDetalle()&#xa;+ eliminarTarea()" vertex="1">
+          <mxGeometry height="100" width="240" x="40" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="calendarioact" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="CalendarioActivity&#xa;-------------------------&#xa;+ mostrarCalendario()" vertex="1">
+          <mxGeometry height="90" width="230" x="330" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="peticionesact" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="PeticionesActivity&#xa;-------------------------&#xa;+ mostrarPeticiones()" vertex="1">
+          <mxGeometry height="90" width="230" x="620" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="chatact" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="ChatActivity&#xa;-------------------------&#xa;+ mostrarMensajes()" vertex="1">
+          <mxGeometry height="90" width="230" x="910" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="usuario" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="tarea" value="1 -&gt; 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="tarea" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="peticion" value="1 -&gt; 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="tarea" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="mensaje" value="1 -&gt; 0..* por chatId">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="195" />
+              <mxPoint x="640" y="10" />
+              <mxPoint x="1175" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="repoauth" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="usuario" value="trabaja con">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="repotareas" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="tarea" value="trabaja con">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="repocolab" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="peticion" value="trabaja con">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="repocolab" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="mensaje" value="trabaja con">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="gestor" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="tarea" value="trabaja con">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="865" y="415" />
+              <mxPoint x="865" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="receptor" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="gestor" value="recibe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="adaptador" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="tarea" value="muestra">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="inicio" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repoauth" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="665" />
+              <mxPoint x="160" y="665" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="registro" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repoauth" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="principal" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repotareas" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="crearact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repotareas" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="detalleact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repotareas" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="910" />
+              <mxPoint x="570" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="calendarioact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repotareas" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="975" />
+              <mxPoint x="590" y="750" />
+              <mxPoint x="570" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="peticionesact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repocolab" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="910" />
+              <mxPoint x="860" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="chatact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repocolab" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1025" y="890" />
+              <mxPoint x="850" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="detalleact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="repocolab" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="890" />
+              <mxPoint x="870" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="principal" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="adaptador" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="870" />
+              <mxPoint x="1130" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="crearact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="gestor" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="995" y="620" />
+              <mxPoint x="1090" y="620" />
+              <mxPoint x="1090" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="detalleact" style="endArrow=open;html=0;rounded=0;strokeColor=#000000;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;dashed=1;" target="gestor" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="1030" />
+              <mxPoint x="1380" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
